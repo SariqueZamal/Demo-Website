@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andarena Cafe | Cozy Coffeehouse & Creative Workspace in Riyadh</title>
-    <meta name="description" content="Experience Andarena Cafe in Riyadh - a cozy, rustic cabin-like cafe with Chesterfield sofas, artisan coffee, gourmet sandwiches, and a perfect work-friendly atmosphere.">
+    <title id="meta-title">Dr. Mohanad Alhorani Dental Clinic | Premium Dentistry Riyadh</title>
+    <meta id="meta-desc" name="description" content="Experience premium dental care in Riyadh with Dr. Mohanad Alhorani. Modern cosmetic dentistry, veneers, Invisalign, pain-free implants, and family dental care. Book now.">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Andarena Cafe | Cozy Coffeehouse & Workspace in Riyadh">
-    <meta property="og:description" content="A quiet, snug rustic oasis in Riyadh. Enjoy specialty coffees, gourmet sandwiches, and laptop-friendly workspace tables.">
-    <meta property="og:image" content="assets/hero_cafe.jpg">
+    <meta id="og-title" property="og:title" content="Dr. Mohanad Alhorani Dental Clinic | Premium Dentistry Riyadh">
+    <meta id="og-desc" property="og:description" content="Premium veneers, implants, and orthodontics by Dr. Mohanad Alhorani in Riyadh. Direct WhatsApp appointment booking and state-of-the-art clinic.">
+    <meta property="og:image" content="assets/hero_dentist.jpg">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Cairo font for Arabic, Outfit and Inter for English and numbers -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -29,24 +30,31 @@
     <header class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
-                Andarena
+                <span class="logo-icon"><i class="fa-solid fa-tooth"></i></span>
+                <span data-translate="logo_text">Dr. Mohanad Alhorani</span>
             </a>
             
             <nav class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#story" class="nav-link">Our Story</a>
-                <a href="#menu" class="nav-link">Menu</a>
-                <a href="#workspace" class="nav-link">Work & Study</a>
-                <a href="#locations" class="nav-link">Locations</a>
-                <a href="#contact" class="nav-link btn-contact">Join Us</a>
+                <a href="#home" class="nav-link active" data-translate="nav_home">Home</a>
+                <a href="#services" class="nav-link" data-translate="nav_services">Services</a>
+                <a href="#about" class="nav-link" data-translate="nav_about">About</a>
+                <a href="#testimonials" class="nav-link" data-translate="nav_testimonials">Reviews</a>
+                <a href="#contact" class="nav-link" data-translate="nav_contact">Contact</a>
+                <a href="#contact" class="nav-link btn-book" data-translate="nav_book_btn">Book Now</a>
             </nav>
-            
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+
+            <div class="nav-actions">
+                <button class="lang-switch-btn" id="lang-switch-btn" aria-label="Switch Language">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="lang-btn-text">العربية</span>
+                </button>
+                
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -54,52 +62,139 @@
     <main>
         
         <!-- Hero Section -->
-        <section id="home" class="hero" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.6), rgba(12, 10, 9, 0.9)), url('assets/hero_cafe.jpg');">
+        <section id="home" class="hero" style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95)), url('assets/hero_dentist.jpg');">
             <div class="hero-content text-center">
-                <span class="hero-badge reveal"><i class="fa-solid fa-star"></i> Riyadh's Cozy Cabin Retreat</span>
-                <h1 class="reveal">Where Coziness <br><span class="text-gradient">Meets Specialty Coffee</span></h1>
-                <p class="reveal-delay-1">Step away from the city buzz. Relax in a vintage Chesterfield sofa, enjoy crafted artisan coffee, and find your focus in our snug, rustic-cabin sanctuary.</p>
+                <span class="hero-badge reveal"><i class="fa-solid fa-certificate"></i> <span data-translate="hero_badge">Riyadh's Premier Dental Clinic</span></span>
+                <h1 class="reveal"><span data-translate="hero_title_1">Beautiful, Healthy Smiles</span> <br><span class="text-gradient" data-translate="hero_title_2">That Last a Lifetime</span></h1>
+                <p class="reveal-delay-1" data-translate="hero_desc">Dr. Mohanad Alhorani offers state-of-the-art cosmetic dentistry, dental implants, and family care in a modern, welcoming environment in Riyadh.</p>
                 <div class="hero-actions reveal-delay-2">
-                    <a href="#menu" class="btn btn-primary">Explore Menu <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="#workspace" class="btn btn-secondary">Workspace Details</a>
+                    <a href="#contact" class="btn btn-primary"><span data-translate="hero_cta_book">Book Appointment</span> <i class="fa-solid fa-calendar-check"></i></a>
+                    <a href="#services" class="btn btn-secondary" data-translate="hero_cta_services">Our Services</a>
                 </div>
             </div>
             <div class="hero-scroll-indicator">
-                <a href="#story"><i class="fa-solid fa-chevron-down animate-bounce"></i></a>
+                <a href="#stats-section"><i class="fa-solid fa-chevron-down animate-bounce"></i></a>
             </div>
         </section>
 
-        <!-- Our Story Section -->
-        <section id="story" class="section story-section">
+        <!-- Stats Section -->
+        <section id="stats-section" class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                        <h3 class="stat-number">25+</h3>
+                        <p class="stat-label" data-translate="stat_exp">Years Experience</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-face-smile"></i></div>
+                        <h3 class="stat-number">5,000+</h3>
+                        <p class="stat-label" data-translate="stat_smiles">Happy Smiles</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-microscope"></i></div>
+                        <h3 class="stat-number">100%</h3>
+                        <p class="stat-label" data-translate="stat_tech">Modern Technology</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <h3 class="stat-number" data-translate="stat_loc_val">Al Muruj</h3>
+                        <p class="stat-label" data-translate="stat_loc">Riyadh Location</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle" data-translate="services_subtitle">Our Services</span>
+                    <h2 class="section-title" data-translate="services_title">Exceptional Dental Care Tailored to You</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Cosmetic -->
+                    <div class="service-card reveal-card">
+                        <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3 data-translate="service_1_title">Cosmetic Dentistry</h3>
+                        <p data-translate="service_1_desc">Transform your smile with Hollywood Smile veneers, advanced teeth whitening, and cosmetic bonding.</p>
+                        <a href="#contact" class="service-link" data-translate="service_book_link">Learn More & Book <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <!-- Implants -->
+                    <div class="service-card reveal-card">
+                        <div class="service-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+                        <h3 data-translate="service_2_title">Dental Implants</h3>
+                        <p data-translate="service_2_desc">Restore missing teeth with premium, durable, and natural-looking dental implants.</p>
+                        <a href="#contact" class="service-link" data-translate="service_book_link">Learn More & Book <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <!-- Orthodontics -->
+                    <div class="service-card reveal-card">
+                        <div class="service-icon"><i class="fa-solid fa-teeth-open"></i></div>
+                        <h3 data-translate="service_3_title">Orthodontics</h3>
+                        <p data-translate="service_3_desc">Straighten your teeth comfortably using traditional braces or modern Invisalign clear aligners.</p>
+                        <a href="#contact" class="service-link" data-translate="service_book_link">Learn More & Book <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <!-- Preventive -->
+                    <div class="service-card reveal-card">
+                        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 data-translate="service_4_title">General & Preventive</h3>
+                        <p data-translate="service_4_desc">Keep your teeth healthy with routine cleanings, digital X-rays, fluoride treatments, and fillings.</p>
+                        <a href="#contact" class="service-link" data-translate="service_book_link">Learn More & Book <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <!-- Root Canal -->
+                    <div class="service-card reveal-card">
+                        <div class="service-icon"><i class="fa-solid fa-kit-medical"></i></div>
+                        <h3 data-translate="service_5_title">Root Canal Therapy</h3>
+                        <p data-translate="service_5_desc">Save damaged teeth and relieve pain with gentle, modern root canal procedures.</p>
+                        <a href="#contact" class="service-link" data-translate="service_book_link">Learn More & Book <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <!-- Pediatric -->
+                    <div class="service-card reveal-card">
+                        <div class="service-icon"><i class="fa-solid fa-child-reaching"></i></div>
+                        <h3 data-translate="service_6_title">Pediatric Dentistry</h3>
+                        <p data-translate="service_6_desc">Gentle and friendly dental care to keep your children's smiles bright and healthy.</p>
+                        <a href="#contact" class="service-link" data-translate="service_book_link">Learn More & Book <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Dr. Mohanad Section -->
+        <section id="about" class="section about-section bg-light">
             <div class="container">
                 <div class="grid grid-2 align-items-center">
-                    <div class="story-image-wrapper reveal-left">
+                    <div class="about-image-wrapper reveal-left">
                         <div class="image-border-effect">
-                            <img src="assets/hero_cafe.jpg" alt="Andarena Cafe Cozy Chesterfield Sofas" class="rounded-lg shadow-xl img-cover">
+                            <!-- Dr. Mohanad portrait -->
+                            <img src="assets/dr_mohanad.jpg" alt="Dr. Mohanad Alhorani Dentist Riyadh" id="dr-portrait" class="rounded-lg shadow-xl img-cover">
                         </div>
                         <div class="floating-badge text-center">
-                            <span class="number">100%</span>
-                            <span class="text">Artisan Arabica</span>
+                            <span class="number">25+</span>
+                            <span class="text" data-translate="about_badge_text">Years of Trust</span>
                         </div>
                     </div>
                     
-                    <div class="story-text-content reveal-right">
-                        <span class="section-subtitle">Our Philosophy</span>
-                        <h2 class="section-title">The Cabin in the City</h2>
-                        <p class="section-desc">Andarena was born from a desire to bring the comforting warmth of a rustic cabin to the energetic heart of Riyadh. We believe a coffeehouse should be more than just a quick stop; it should be a home away from home.</p>
+                    <div class="about-text-content reveal-right">
+                        <span class="section-subtitle" data-translate="about_subtitle">Meet Your Dentist</span>
+                        <h2 class="section-title" data-translate="about_title">Dr. Mohanad Alhorani</h2>
+                        <p class="section-desc" data-translate="about_desc_1">Dr. Mohanad Alhorani is a highly experienced and certified dentist in Riyadh, dedicated to providing premium dental treatments using state-of-the-art medical technology. In partnership with Alpha Clinic, his practice focuses on creating a comfortable, stress-free, and personalized experience for every patient.</p>
+                        <p class="section-desc" data-translate="about_desc_2">Whether you need a simple routine check-up, cosmetic veneers, or complex dental implants, Dr. Mohanad's detail-oriented approach ensures premium results and patient comfort.</p>
                         
-                        <p class="section-desc">With exposed brick walls, rich dark wood details, glowing filament lights, and vintage Chesterfield leather sofas, every corner of Andarena is designed to wrap you in comfort. Whether you are catching up with friends, diving into a good book, or sealing a business proposal, you'll find the perfect, quiet atmosphere here.</p>
-                        
-                        <div class="story-highlights grid grid-2 gap-4">
-                            <div class="highlight-item">
-                                <span class="highlight-icon"><i class="fa-solid fa-couch"></i></span>
-                                <h4>Cozy Premium Comfort</h4>
-                                <p>Plush sofas and snug wooden booth seating.</p>
+                        <div class="about-stats grid grid-2 gap-4">
+                            <div class="about-stat-item">
+                                <h4>99.2%</h4>
+                                <p data-translate="about_stat_1">Patient Satisfaction</p>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-icon"><i class="fa-solid fa-leaf"></i></span>
-                                <h4>Artisan Beans</h4>
-                                <p>Sustainably sourced, perfectly roasted specialty coffee.</p>
+                            <div class="about-stat-item">
+                                <h4>15+</h4>
+                                <p data-translate="about_stat_2">Years in Riyadh</p>
                             </div>
                         </div>
                     </div>
@@ -107,417 +202,258 @@
             </div>
         </section>
 
-        <!-- Interactive Menu Section -->
-        <section id="menu" class="section menu-section bg-alt">
+        <!-- Before & After Gallery -->
+        <section class="section gallery-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-subtitle">Crafted with Passion</span>
-                    <h2 class="section-title">Explore Our Artisan Menu</h2>
-                    <p class="section-desc max-w-xl mx-auto">From bold double espressos to our signature lattes, paired with artisan-baked sandwiches and pastries, we have something to delight every palate.</p>
+                    <span class="section-subtitle" data-translate="gallery_subtitle">Smile Gallery</span>
+                    <h2 class="section-title" data-translate="gallery_title">Real Transformations, Real Confidence</h2>
+                    <div class="header-line"></div>
                 </div>
                 
-                <!-- Category Filter Tabs -->
-                <div class="menu-tabs reveal">
-                    <button class="tab-btn active" data-category="all">All Items</button>
-                    <button class="tab-btn" data-category="hot-coffee">Hot Coffee</button>
-                    <button class="tab-btn" data-category="cold-coffee">Cold Drinks</button>
-                    <button class="tab-btn" data-category="sandwiches">Sandwiches</button>
-                    <button class="tab-btn" data-category="pastries">Pastries & Sweets</button>
-                </div>
-                
-                <!-- Menu Grid -->
-                <div class="menu-grid grid grid-3 gap-6 reveal-up">
-                    
-                    <!-- Item 1: Flat White -->
-                    <div class="menu-card" data-category="hot-coffee">
-                        <div class="menu-image-container">
-                            <img src="assets/flat_white.jpg" alt="Flat White Coffee with Latte Art" class="menu-img">
-                            <span class="menu-price">18 SAR</span>
+                <div class="gallery-grid">
+                    <div class="gallery-card reveal-card">
+                        <div class="gallery-badge" data-translate="gallery_badge_cosmetic">Cosmetic Veneers</div>
+                        <div class="gallery-images">
+                            <div class="gallery-img-box">
+                                <span class="gallery-label" data-translate="before">Before</span>
+                                <div class="gallery-teaser before-teeth"></div>
+                            </div>
+                            <div class="gallery-img-box">
+                                <span class="gallery-label" data-translate="after">After</span>
+                                <div class="gallery-teaser after-teeth-1"></div>
+                            </div>
                         </div>
-                        <div class="menu-info">
-                            <div class="menu-meta">
-                                <h3>Flat White</h3>
-                                <span class="badge">Signature</span>
-                            </div>
-                            <p class="menu-description">Perfect balance of rich espresso and velvety microfoam, featuring complex nutty notes.</p>
-                            <div class="menu-footer">
-                                <span class="calories"><i class="fa-solid fa-fire-flame-simple"></i> 120 kcal</span>
-                                <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
-                            </div>
+                        <div class="gallery-desc">
+                            <h4 data-translate="gallery_case_1_title">Full Smile Makeover</h4>
+                            <p data-translate="gallery_case_1_desc">Premium porcelain veneers to correct discoloration and gaps.</p>
                         </div>
                     </div>
                     
-                    <!-- Item 2: Smoked Turkey & Halloumi -->
-                    <div class="menu-card" data-category="sandwiches">
-                        <div class="menu-image-container">
-                            <img src="assets/turkey_sandwich.jpg" alt="Smoked Turkey and Halloumi Sandwich" class="menu-img">
-                            <span class="menu-price">28 SAR</span>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-meta">
-                                <h3>Smoked Turkey & Halloumi</h3>
-                                <span class="badge">Hot seller</span>
+                    <div class="gallery-card reveal-card">
+                        <div class="gallery-badge" data-translate="gallery_badge_implant">Dental Implant</div>
+                        <div class="gallery-images">
+                            <div class="gallery-img-box">
+                                <span class="gallery-label" data-translate="before">Before</span>
+                                <div class="gallery-teaser before-teeth-missing"></div>
                             </div>
-                            <p class="menu-description">Smoked premium turkey breast, grilled halloumi cheese, fresh pesto, baby arugula on sourdough toast.</p>
-                            <div class="menu-footer">
-                                <span class="calories"><i class="fa-solid fa-fire-flame-simple"></i> 450 kcal</span>
-                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            <div class="gallery-img-box">
+                                <span class="gallery-label" data-translate="after">After</span>
+                                <div class="gallery-teaser after-teeth-2"></div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- Item 3: Spanish Latte -->
-                    <div class="menu-card" data-category="hot-coffee">
-                        <div class="menu-image-container">
-                            <img src="assets/flat_white.jpg" alt="Spanish Latte" class="menu-img">
-                            <span class="menu-price">22 SAR</span>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-meta">
-                                <h3>Spanish Latte</h3>
-                            </div>
-                            <p class="menu-description">Double shot of espresso combined with creamy textured milk and a touch of condensed sweetness.</p>
-                            <div class="menu-footer">
-                                <span class="calories"><i class="fa-solid fa-fire-flame-simple"></i> 240 kcal</span>
-                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 4: Iced Spanish Latte -->
-                    <div class="menu-card" data-category="cold-coffee">
-                        <div class="menu-image-container">
-                            <img src="assets/workspace.jpg" alt="Iced Spanish Latte" class="menu-img">
-                            <span class="menu-price">24 SAR</span>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-meta">
-                                <h3>Iced Spanish Latte</h3>
-                                <span class="badge">Popular</span>
-                            </div>
-                            <p class="menu-description">Chilled, refreshing espresso with layered cold milk and sweetened condensed milk over crystal ice.</p>
-                            <div class="menu-footer">
-                                <span class="calories"><i class="fa-solid fa-fire-flame-simple"></i> 260 kcal</span>
-                                <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 5: Spicy Tuna Sandwich -->
-                    <div class="menu-card" data-category="sandwiches">
-                        <div class="menu-image-container">
-                            <img src="assets/turkey_sandwich.jpg" alt="Spicy Tuna Sandwich" class="menu-img">
-                            <span class="menu-price">26 SAR</span>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-meta">
-                                <h3>Spicy Tuna Melt</h3>
-                            </div>
-                            <p class="menu-description">Premium light tuna mixed with spicy sriracha mayo, melted provolone, and pickled jalapeños.</p>
-                            <div class="menu-footer">
-                                <span class="calories"><i class="fa-solid fa-fire-flame-simple"></i> 410 kcal</span>
-                                <span class="rating"><i class="fa-solid fa-star"></i> 4.6</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 6: Warm Chocolate Chip Cookie -->
-                    <div class="menu-card" data-category="pastries">
-                        <div class="menu-image-container">
-                            <img src="assets/flat_white.jpg" alt="Warm Chocolate Chip Cookie" class="menu-img">
-                            <span class="menu-price">14 SAR</span>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-meta">
-                                <h3>Warm Cookie</h3>
-                                <span class="badge">Freshly baked</span>
-                            </div>
-                            <p class="menu-description">Gooey Belgian milk chocolate chips folded in buttery, soft-baked dough, sprinkled with sea salt.</p>
-                            <div class="menu-footer">
-                                <span class="calories"><i class="fa-solid fa-fire-flame-simple"></i> 320 kcal</span>
-                                <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- Laptop-friendly Workspace Section -->
-        <section id="workspace" class="section workspace-section" style="background-image: linear-gradient(to right, rgba(12, 10, 9, 0.95), rgba(12, 10, 9, 0.7)), url('assets/workspace.jpg');">
-            <div class="container">
-                <div class="grid grid-2 gap-8 align-items-center">
-                    <div class="workspace-text reveal-left">
-                        <span class="section-subtitle text-amber">Designed for Creators</span>
-                        <h2 class="section-title text-white">Your Productive Sanctuary</h2>
-                        <p class="text-light">Tired of loud coffee shops with no charging outlets? Andarena is designed from the ground up to support remote workers, freelancers, and students.</p>
-                        
-                        <div class="workspace-features mt-6">
-                            <div class="feature-row">
-                                <span class="feature-icon"><i class="fa-solid fa-wifi"></i></span>
-                                <div>
-                                    <h5>Ultra-Fast Wi-Fi</h5>
-                                    <p>High-speed, stable, and completely free connection to power your tasks.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="feature-row">
-                                <span class="feature-icon"><i class="fa-solid fa-plug"></i></span>
-                                <div>
-                                    <h5>Outlets Everywhere</h5>
-                                    <p>Accessible power outlets at every desk, booth, and seating arrangement.</p>
-                                </div>
-                            </div>
-
-                            <div class="feature-row">
-                                <span class="feature-icon"><i class="fa-solid fa-volume-mute"></i></span>
-                                <div>
-                                    <h5>Focus Zones</h5>
-                                    <p>Quiet, dedicated study corners and large workspace tables with comfortable lighting.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Special student offer card -->
-                        <div class="student-discount-card mt-8 reveal-up">
-                            <div class="discount-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                            <div class="discount-info">
-                                <h4>Student Discount: 20% OFF</h4>
-                                <p>Present your student ID to our barista and enjoy a 20% discount on all coffee beverages and sandwiches, all day long.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Decorative Right Column -->
-                    <div class="workspace-image-container hide-mobile reveal-right">
-                        <div class="experience-card">
-                            <span class="card-icon"><i class="fa-solid fa-mug-hot animate-pulse"></i></span>
-                            <div class="card-body">
-                                <h3>Fuel Your Inspiration</h3>
-                                <p>Experience working in an environment that values silence, quality coffee, and premium comfort.</p>
-                            </div>
+                        <div class="gallery-desc">
+                            <h4 data-translate="gallery_case_2_title">Single Tooth Replacement</h4>
+                            <p data-translate="gallery_case_2_desc">Titanium dental implant restoring full chewing function.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Locations & Operating Hours -->
-        <section id="locations" class="section locations-section bg-alt">
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section testimonials-section bg-light">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-subtitle">Find Us in Riyadh</span>
-                    <h2 class="section-title">Our Branches & Hours</h2>
-                    <p class="section-desc max-w-xl mx-auto">Visit us at any of our branches. We are open late to keep you inspired and energized.</p>
+                    <span class="section-subtitle" data-translate="reviews_subtitle">Patient Success Stories</span>
+                    <h2 class="section-title" data-translate="reviews_title">What Our Patients Say</h2>
+                    <div class="header-line"></div>
                 </div>
                 
-                <div class="grid grid-2 gap-8 reveal-up">
-                    
-                    <!-- Branch 1 details -->
-                    <div class="location-card">
-                        <div class="location-body">
-                            <span class="loc-badge"><i class="fa-solid fa-location-dot"></i> Ghirnatah Branch</span>
-                            <h3>Ghirnatah (Al-Shuhada)</h3>
-                            <p class="address"><i class="fa-solid fa-map-location-dot"></i> Abi Jafar Al Mansour St, Ghirnatah District, Riyadh</p>
-                            
-                            <div class="hours-list">
-                                <div class="hour-row">
-                                    <span class="days">Saturday – Wednesday</span>
-                                    <span class="time">06:00 AM – 12:00 AM</span>
-                                </div>
-                                <div class="hour-row highlight">
-                                    <span class="days">Thursday & Friday</span>
-                                    <span class="time">06:00 AM – 02:00 AM</span>
-                                </div>
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card reveal-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-translate="review_1_text">"The best dental experience in Riyadh! Dr. Mohanad is extremely professional and detail-oriented. The clinic is pristine and uses state-of-the-art technology. I got my veneers here and couldn't be happier with my new smile."</p>
+                        <div class="testimonial-author">
+                            <div class="author-details">
+                                <h4 data-translate="review_1_name">Sarah A.</h4>
+                                <span data-translate="review_1_treatment">Veneers Treatment</span>
                             </div>
-                            
-                            <div class="card-actions">
-                                <a href="https://maps.google.com/?q=Andarena+Coffee+Abi+Jafar+Al+Mansour+St+Riyadh" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-directions"></i> Get Directions</a>
-                                <a href="tel:+966123456789" class="btn btn-text btn-sm"><i class="fa-solid fa-phone"></i> Call Branch</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card reveal-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-translate="review_2_text">"Dr. Mohanad Alhorani is a true artist. He explained the entire implant procedure, making me feel completely at ease. The treatment was painless and the results are incredibly natural."</p>
+                        <div class="testimonial-author">
+                            <div class="author-details">
+                                <h4 data-translate="review_2_name">Faisal M.</h4>
+                                <span data-translate="review_2_treatment">Dental Implants</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card reveal-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-translate="review_3_text">"Very organized clinic and friendly staff. Dr. Mohanad is excellent with kids too. My daughter had braces here, and the care was top-notch from start to finish. Highly recommend!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-details">
+                                <h4 data-translate="review_3_name">Layla K.</h4>
+                                <span data-translate="review_3_treatment">Orthodontics (Braces)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Branch 2 details -->
-                    <div class="location-card">
-                        <div class="location-body">
-                            <span class="loc-badge"><i class="fa-solid fa-location-dot"></i> Al-Malqa Branch</span>
-                            <h3>Al-Malqa (North Riyadh)</h3>
-                            <p class="address"><i class="fa-solid fa-map-location-dot"></i> Anas Ibn Malik Rd, Al-Malqa District, Riyadh</p>
-                            
-                            <div class="hours-list">
-                                <div class="hour-row">
-                                    <span class="days">Saturday – Wednesday</span>
-                                    <span class="time">06:00 AM – 12:00 AM</span>
-                                </div>
-                                <div class="hour-row highlight">
-                                    <span class="days">Thursday & Friday</span>
-                                    <span class="time">06:00 AM – 02:00 AM</span>
-                                </div>
-                            </div>
-                            
-                            <div class="card-actions">
-                                <a href="https://maps.google.com/?q=Andarena+Coffee+Anas+Ibn+Malik+Rd+Riyadh" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-directions"></i> Get Directions</a>
-                                <a href="tel:+966123456790" class="btn btn-text btn-sm"><i class="fa-solid fa-phone"></i> Call Branch</a>
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card reveal-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-translate="review_4_text">"I had a severe toothache and booked an appointment via WhatsApp. They responded instantly and fit me in. Dr. Mohanad did a root canal treatment that was smooth and pain-free. Outstanding service!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-details">
+                                <h4 data-translate="review_4_name">Khalid O.</h4>
+                                <span data-translate="review_4_treatment">Root Canal Therapy</span>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </section>
 
-        <!-- Contact & Feedback Form -->
+        <!-- Booking & Contact Section -->
         <section id="contact" class="section contact-section">
             <div class="container">
-                <div class="grid grid-2 gap-8 align-items-center">
-                    
-                    <div class="contact-info reveal-left">
-                        <span class="section-subtitle">Get in Touch</span>
-                        <h2 class="section-title">We'd Love to Hear From You</h2>
-                        <p class="section-desc">Have a question about our space, want to cater an event, or want to share feedback about your visit? Drop us a message and our team will get back to you.</p>
+                <div class="grid grid-2 gap-8">
+                    <!-- Booking Form -->
+                    <div class="booking-form-wrapper reveal-left">
+                        <span class="section-subtitle" data-translate="booking_subtitle">Book An Appointment</span>
+                        <h2 class="section-title" data-translate="booking_title">Start Your Smile Journey</h2>
                         
-                        <div class="contact-methods mt-6">
-                            <div class="method-item">
-                                <span class="method-icon"><i class="fa-solid fa-envelope"></i></span>
-                                <div>
-                                    <h5>Email Us</h5>
-                                    <p><a href="mailto:hello@andarenacoffee.com">hello@andarenacoffee.com</a></p>
-                                </div>
-                            </div>
-                            
-                            <div class="method-item">
-                                <span class="method-icon"><i class="fa-brands fa-instagram"></i></span>
-                                <div>
-                                    <h5>Follow Instagram</h5>
-                                    <p><a href="https://instagram.com/andarena_coffee" target="_blank">@andarena_coffee</a></p>
-                                </div>
-                            </div>
-
-                            <div class="method-item">
-                                <span class="method-icon"><i class="fa-solid fa-phone-volume"></i></span>
-                                <div>
-                                    <h5>General Enquiries</h5>
-                                    <p><a href="tel:+966551234567">+966 55 123 4567</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact Form Card -->
-                    <div class="contact-form-card reveal-right">
-                        <form id="contact-form" class="feedback-form">
-                            <h3>Send Message</h3>
-                            
+                        <form id="booking-form" class="booking-form">
                             <div class="form-group">
-                                <input type="text" id="form-name" class="form-control" required placeholder=" ">
-                                <label for="form-name" class="floating-label">Full Name</label>
+                                <input type="text" id="patient-name" required placeholder="Your Name">
                             </div>
-                            
                             <div class="form-group">
-                                <input type="email" id="form-email" class="form-control" required placeholder=" ">
-                                <label for="form-email" class="floating-label">Email Address</label>
+                                <input type="tel" id="patient-phone" required placeholder="Your Phone Number">
                             </div>
-
                             <div class="form-group">
-                                <select id="form-subject" class="form-control" required>
-                                    <option value="" disabled selected hidden></option>
-                                    <option value="feedback">General Feedback</option>
-                                    <option value="catering">Catering Inquiry</option>
-                                    <option value="workspace">Workspace / Table Reservation</option>
-                                    <option value="careers">Careers</option>
+                                <select id="dental-service" required>
+                                    <option value="" disabled selected data-translate="select_service">Select Service</option>
+                                    <option value="Cosmetic Veneers" data-translate="service_opt_1">Cosmetic Veneers</option>
+                                    <option value="Teeth Whitening" data-translate="service_opt_2">Teeth Whitening</option>
+                                    <option value="Dental Implants" data-translate="service_opt_3">Dental Implants</option>
+                                    <option value="Orthodontics (Invisalign/Braces)" data-translate="service_opt_4">Orthodontics (Invisalign/Braces)</option>
+                                    <option value="General Check-up & Cleaning" data-translate="service_opt_5">General Check-up & Cleaning</option>
+                                    <option value="Root Canal Therapy" data-translate="service_opt_6">Root Canal Therapy</option>
                                 </select>
-                                <label for="form-subject" class="floating-label">Subject</label>
                             </div>
-                            
-                            <div class="form-group">
-                                <textarea id="form-message" rows="4" class="form-control" required placeholder=" "></textarea>
-                                <label for="form-message" class="floating-label">Your Message</label>
+                            <div class="grid grid-2 gap-4">
+                                <div class="form-group">
+                                    <label for="booking-date" data-translate="booking_date_lbl">Preferred Date</label>
+                                    <input type="date" id="booking-date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="booking-time" data-translate="booking_time_lbl">Preferred Time</label>
+                                    <input type="time" id="booking-time" required>
+                                </div>
                             </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fa-brands fa-whatsapp"></i> <span data-translate="booking_submit">Book via WhatsApp</span>
+                            </button>
                         </form>
                     </div>
                     
+                    <!-- Contact Details & Map -->
+                    <div class="contact-details-wrapper reveal-right">
+                        <div class="contact-info-card">
+                            <h3 data-translate="info_title">Clinic Details</h3>
+                            
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                                <div class="info-text">
+                                    <h4 data-translate="info_address_lbl">Address</h4>
+                                    <p data-translate="info_address_txt">3134 Al Imam Abdullah Bin Saud Bin Abdulaziz Rd, Al Muruj, Riyadh 12281</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                                <div class="info-text">
+                                    <h4 data-translate="info_hours_lbl">Working Hours</h4>
+                                    <p data-translate="info_hours_txt">Saturday - Thursday: 9:30 AM - 9:00 PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="info-text">
+                                    <h4 data-translate="info_phone_lbl">Phone & WhatsApp</h4>
+                                    <p class="phone-link"><a href="https://wa.me/966536351147" target="_blank" rel="noopener">+966 53 635 1147</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Map Placeholder / Styled Visual Map Card -->
+                        <div class="map-container rounded-lg shadow-lg">
+                            <!-- Premium styled Map box, redirecting to real maps -->
+                            <a href="https://www.google.com/maps/search/?api=1&query=Dr.+Mohanad+Alhorani+Dental+Clinic+Al+Muruj+Riyadh" target="_blank" rel="noopener" class="map-link-overlay">
+                                <div class="map-placeholder-content">
+                                    <i class="fa-solid fa-location-dot map-marker-anim"></i>
+                                    <span data-translate="view_map_btn">Open in Google Maps</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
+        
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid grid grid-3 gap-8">
-                
-                <!-- Footer Brand Column -->
-                <div class="footer-brand">
-                    <a href="#home" class="logo text-white">
-                        <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
-                        Andarena
-                    </a>
-                    <p class="mt-4 text-sm text-muted">A premium snug rustic cabin coffeehouse in Riyadh. Crafting premium specialty coffees, artisanal eats, and highly productive environments for learners and creators.</p>
-                    <div class="social-links mt-4">
-                        <a href="https://instagram.com/andarena_coffee" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    </div>
-                </div>
-
-                <!-- Footer Quick Links -->
-                <div class="footer-links">
-                    <h4>Quick Navigation</h4>
-                    <ul class="mt-4">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#story">Our Story</a></li>
-                        <li><a href="#menu">Artisan Menu</a></li>
-                        <li><a href="#workspace">Work & Study</a></li>
-                        <li><a href="#locations">Branches & Hours</a></li>
-                    </ul>
-                </div>
-
-                <!-- Footer Contact Details -->
-                <div class="footer-contact">
-                    <h4>Reach Us</h4>
-                    <ul class="mt-4 text-muted">
-                        <li><i class="fa-solid fa-location-dot"></i> Abi Jafar Al Mansour St, Riyadh</li>
-                        <li><i class="fa-solid fa-phone"></i> +966 55 123 4567</li>
-                        <li><i class="fa-solid fa-envelope"></i> hello@andarenacoffee.com</li>
-                    </ul>
-                    <div class="student-reminder mt-4">
-                        <span><i class="fa-solid fa-graduation-cap"></i> 20% student discount applies in-store!</span>
-                    </div>
-                </div>
-
+        <div class="container text-center">
+            <div class="footer-logo">
+                <i class="fa-solid fa-tooth logo-icon"></i>
+                <h3 data-translate="logo_text">Dr. Mohanad Alhorani</h3>
+                <p data-translate="footer_subtitle">Premium dental treatments in the heart of Riyadh</p>
             </div>
             
-            <div class="footer-bottom text-center">
-                <p>&copy; 2026 Andarena Cafe. All rights reserved. Built with love in Riyadh.</p>
+            <div class="footer-socials">
+                <a href="https://wa.me/966536351147" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://maps.google.com/?q=Dr.+Mohanad+Alhorani+Dental+Clinic+Riyadh" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fa-solid fa-map-pin"></i></a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span data-translate="logo_text">Dr. Mohanad Alhorani</span>. <span data-translate="footer_rights">All Rights Reserved.</span></p>
+                <p class="alpha-association" data-translate="alpha_association">Associated with Alpha Clinic</p>
             </div>
         </div>
     </footer>
 
-    <!-- Notification Toast -->
-    <div id="toast" class="toast">
-        <div class="toast-content">
-            <span class="toast-icon"><i class="fa-solid fa-circle-check"></i></span>
-            <div class="toast-message">
-                <h4 id="toast-title">Success</h4>
-                <p id="toast-body">Your message has been sent successfully!</p>
-            </div>
-            <button class="toast-close" id="toast-close">&times;</button>
-        </div>
-    </div>
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/966536351147" class="whatsapp-floating" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip" data-translate="wa_tooltip">Book Consultation</span>
+    </a>
 
-    <!-- Theme Toggle Switch (Cozy Floating bar) -->
-    <div class="theme-switch-wrapper">
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme mode">
-            <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
-        </button>
-    </div>
-
-    <!-- Custom JavaScript -->
+    <!-- Custom Javascript -->
     <script src="script.js"></script>
 </body>
 </html>
