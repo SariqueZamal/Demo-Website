@@ -135,29 +135,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       Scroll-Reveal Animations (Intersection Observer)
+       Scroll-Reveal Animations (Intersection Observer & Fallback)
        ========================================================================== */
-    const revealOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-up');
     
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                // Once it reveals, we don't need to observe it anymore
-                observer.unobserve(entry.target);
+    if ('IntersectionObserver' in window) {
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+        
+        revealElements.forEach(el => revealObserver.observe(el));
+    } else {
+        // Observer not supported: fallback immediately
+        revealElements.forEach(el => el.classList.add('active'));
+    }
+    
+    // Safety Fallback Timeout: Force-reveal all elements after 1.5 seconds if they fail to animate
+    setTimeout(() => {
+        revealElements.forEach(el => {
+            if (!el.classList.contains('active')) {
+                el.classList.add('active');
             }
         });
-    }, revealOptions);
-    
-    // Targets
-    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-up');
-    revealElements.forEach(el => revealObserver.observe(el));
+    }, 1500);
     
     // Make sure hero section items fade in immediately
-    document.querySelector('.hero').classList.add('active');
+    const hero = document.querySelector('.hero');
+    if (hero) hero.classList.add('active');
 
     /* ==========================================================================
        Contact Form Submission & Toast Alert

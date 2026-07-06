@@ -1254,48 +1254,50 @@ select.form-control:valid ~ .floating-label {
 /* ==========================================================================
    Interactive UI Animations & Transitions (Reveal)
    ========================================================================== */
-.reveal, .reveal-left, .reveal-right, .reveal-up {
+.js .reveal, .js .reveal-left, .js .reveal-right, .js .reveal-up {
     opacity: 0;
     transition: opacity 0.8s var(--transition-smooth), transform 0.8s var(--transition-smooth);
 }
 
-.reveal {
+.js .reveal {
     transform: scale(0.96);
 }
 
-.reveal-left {
+.js .reveal-left {
     transform: translateX(-40px);
 }
 
-.reveal-right {
+.js .reveal-right {
     transform: translateX(40px);
 }
 
-.reveal-up {
+.js .reveal-up {
     transform: translateY(40px);
 }
 
 .reveal.active, .reveal-left.active, .reveal-right.active, .reveal-up.active {
-    opacity: 1;
-    transform: translate(0) scale(1);
+    opacity: 1 !important;
+    transform: translate(0) scale(1) !important;
 }
 
-.reveal-delay-1 {
+.js .reveal-delay-1 {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s var(--transition-smooth) 0.2s, transform 0.8s var(--transition-smooth) 0.2s;
 }
 
-.reveal-delay-2 {
+.js .reveal-delay-2 {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s var(--transition-smooth) 0.4s, transform 0.8s var(--transition-smooth) 0.4s;
 }
 
 .hero.active .reveal-delay-1,
-.hero.active .reveal-delay-2 {
-    opacity: 1;
-    transform: translateY(0);
+.hero.active .reveal-delay-2,
+.active .reveal-delay-1,
+.active .reveal-delay-2 {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 /* ==========================================================================
